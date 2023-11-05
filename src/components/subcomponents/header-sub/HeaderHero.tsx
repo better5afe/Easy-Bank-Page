@@ -8,6 +8,7 @@ const HeaderHero = () => {
 	return (
 		<div className='header__hero'>
 			<div className='header__hero-carousel'>
+				
 				<img src={HeroImage} alt='' className='header__hero-carousel-img' />
 			</div>
 		</div>

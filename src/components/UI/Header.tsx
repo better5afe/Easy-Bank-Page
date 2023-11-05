@@ -7,8 +7,8 @@ import './Header.scss';
 const Header = () => {
 	return (
 		<header className='header'>
-				<HeaderHero />
 			<Wrapper className='header__wrapper'>
+				<HeaderHero />
 				<HeaderDetails />
 			</Wrapper>
 		</header>

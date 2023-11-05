@@ -17,10 +17,11 @@
 
 @media screen and (min-width: 1440px) {
 	.header__details {
+		max-width: 44.7rem;
 		margin-block-start: 0;
-        text-align: left;
+		text-align: left;
 
-		&-tile {
+		&-title {
 			font-size: 5.6rem;
 		}
 

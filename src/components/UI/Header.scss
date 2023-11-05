@@ -1,3 +1,13 @@
-.header {
-	min-height: 100vh;
+@use '../../assets/styles/mixins' as mixins;
+
+@media screen and (min-width: 1440px) {
+	.header {
+		height: 66rem;
+
+		&__wrapper {
+			position: relative;
+            height: 100%;
+			@include mixins.flexbox(space-between, center, row);
+		}
+	}
 }

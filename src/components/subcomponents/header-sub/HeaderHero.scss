@@ -4,7 +4,6 @@
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	// overflow: hidden;
 
 	&-carousel {
 		position: relative;
@@ -20,8 +19,8 @@
 			left: 50%;
 			transform: translateX(-50%);
 			width: 100%;
-			max-width: 73.2rem;
-			max-height: 90.1rem;
+			max-width: 80.2rem;
+			max-height: 97.1rem;
 		}
 	}
 }
@@ -37,13 +36,36 @@
 }
 
 @media screen and (min-width: 768px) {
-    .header__hero {
-        height: 60vh;
-    }
+	.header__hero {
+		height: 60vh;
+	}
 }
 
 @media screen and (min-width: 1440px) {
 	.header__hero {
+		position: absolute;
+		right: -45%;
+		bottom: 0;
+		height: 100%;
+		width: 100%;
+		order: 1;
 		background-image: url('../../../assets/images/header/bg-intro-desktop.svg');
+
+		&-carousel {
+			&-img {
+				bottom: -19rem;
+				transform: translateX(-55%);
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 1800px) {
+	.header__hero {
+		&-carousel {
+			&-img {
+				transform: translateX(-70%);
+			}
+		}
 	}
 }
