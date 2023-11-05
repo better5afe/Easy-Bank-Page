@@ -1,3 +1,4 @@
+import ReactDOM from 'react-dom';
 import Nav from './components/UI/Nav';
 import Overlay from './components/reusable/Overlay';
 
@@ -5,7 +6,7 @@ const App = () => {
 	return (
 		<>
 			<Nav />
-			<Overlay />
+			{ReactDOM.createPortal(<Overlay />, document.getElementById('overlay')!)}
 		</>
 	);
 };
