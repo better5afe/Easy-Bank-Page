@@ -1,6 +1,24 @@
+@use './colors' as colors;
+
 @mixin flexbox($justify-items, $align-items, $flex-direction) {
 	display: flex;
 	justify-content: $justify-items;
 	align-items: $align-items;
 	flex-direction: $flex-direction;
+}
+
+@mixin heading {
+	color: colors.$darkGray;
+	font-weight: 300;
+}
+
+@mixin text {
+	font-size: 1.5rem;
+	color: colors.$lightGray;
+	line-height: 2.5rem;
+
+	@media screen and (min-width: 1440px) {
+		font-size: 1.6rem;
+		line-height: 2.6rem;
+	}
 }

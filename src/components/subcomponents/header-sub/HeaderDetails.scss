@@ -1,0 +1,33 @@
+@use '../../../assets/styles/mixins' as mixins;
+
+.header__details {
+	margin-block-start: 4.1rem;
+	text-align: center;
+
+	&-title {
+		@include mixins.heading;
+		font-size: 4rem;
+	}
+
+	&-text {
+		margin-block: 1.6rem 3.2rem;
+		@include mixins.text;
+	}
+}
+
+@media screen and (min-width: 1440px) {
+	.header__details {
+		margin-block-start: 0;
+        text-align: left;
+
+		&-tile {
+			font-size: 5.6rem;
+		}
+
+		&-text {
+			margin-block-start: 2.4rem;
+			font-size: 1.8rem;
+			line-height: 2.8rem;
+		}
+	}
+}
