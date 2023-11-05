@@ -1,0 +1,49 @@
+.header__hero {
+	height: 50vh;
+	background-image: url('../../../assets/images/header/bg-intro-mobile.svg');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	// overflow: hidden;
+
+	&-carousel {
+		position: relative;
+		height: 100%;
+		width: 100%;
+		text-align: center;
+		margin: 0;
+
+		&-img {
+			position: absolute;
+			display: block;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 100%;
+			max-width: 73.2rem;
+			max-height: 90.1rem;
+		}
+	}
+}
+
+@media screen and (min-width: 572px) {
+	.header__hero {
+		&-carousel {
+			&-img {
+				bottom: -4.5rem;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+    .header__hero {
+        height: 60vh;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+	.header__hero {
+		background-image: url('../../../assets/images/header/bg-intro-desktop.svg');
+	}
+}
