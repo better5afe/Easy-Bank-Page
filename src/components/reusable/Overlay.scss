@@ -1,0 +1,22 @@
+@use '../../assets/styles/colors' as colors;
+
+.overlay {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-image: colors.$grayGradient;
+	transition: visibility 0.3s, opacity 0.3s;
+    z-index: 10;
+
+	&--visible {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	&--hidden {
+		visibility: hidden;
+		opacity: 0;
+	}
+}

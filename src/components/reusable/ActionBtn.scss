@@ -1,0 +1,19 @@
+@use '../../assets/styles/colors' as colors;
+
+.actionBtn {
+	padding: 1.4rem 3.3rem;
+	background-image: colors.$primaryGradient;
+	border: none;
+	outline: none;
+	border-radius: 2.2rem;
+	font-size: 1.4rem;
+	color: colors.$white;
+	font-weight: 700;
+	cursor: pointer;
+	transition: opacity 0.3s;
+
+	&:hover,
+	&:focus {
+		opacity: 0.5;
+	}
+}

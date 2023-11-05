@@ -1,5 +1,13 @@
+import Nav from './components/UI/Nav';
+import Overlay from './components/reusable/Overlay';
+
 const App = () => {
-	return <div></div>;
+	return (
+		<>
+			<Nav />
+			<Overlay />
+		</>
+	);
 };
 
 export default App;
