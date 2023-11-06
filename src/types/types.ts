@@ -17,10 +17,16 @@ export interface NavContextProps {
 }
 
 interface CardDetails {
-	title: string,
-	description: string
+	title: string;
+	description: string;
 }
 
 export interface AboutCardProps extends CardDetails {
-	icon: any
+	icon: any;
+}
+
+export interface ArticleCardProps extends CardDetails {
+	image: any;
+	alt: string;
+	author: string;
 }

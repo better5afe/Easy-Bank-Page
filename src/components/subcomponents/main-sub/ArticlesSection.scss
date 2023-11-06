@@ -1,0 +1,39 @@
+@use '../../../assets/styles/colors' as colors;
+@use '../../../assets/styles/mixins' as mixins;
+
+.articles {
+	padding: 8.8rem 0;
+	background: colors.$articlesBg;
+	text-align: center;
+
+	&__title {
+		margin-block-end: 3.1rem;
+		@include mixins.section-heading;
+	}
+
+	&__cards {
+		@include mixins.flexbox(center, center, column);
+		list-style-type: none;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.articles {
+		&__title {
+			margin-block-end: 4rem;
+		}
+
+		&__cards {
+			justify-content: space-between;
+			flex-direction: row;
+			flex-wrap: wrap;
+		}
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.articles {
+		padding: 8rem 0;
+		text-align: left;
+	}
+}

@@ -44,3 +44,15 @@
 		line-height: 2.8rem;
 	}
 }
+
+@mixin article-text {
+	font-size: 1.3rem;
+	color: colors.$lightGray;
+	line-height: 1.8rem;
+}
+
+@mixin author-text {
+	font-size: 1rem;
+	color: colors.$lightGray;
+	line-height: 1.8rem;
+}
