@@ -2,7 +2,6 @@
 @use '../../assets/styles/colors' as colors;
 
 .footer {
-	@include mixins.flexbox(center, center, column);
 	padding: 4rem 0;
 	background: colors.$darkGray;
 
@@ -18,9 +17,10 @@
 			width: 18.4rem;
 			margin: 0 auto;
 			margin-block: 3.2rem;
-			list-style-type: none;
 
 			a {
+                outline: none;
+                
 				svg {
 					path {
 						transition: fill 0.3s linear;
@@ -40,7 +40,7 @@
 	}
 
 	&__links {
-		list-style-type: none;
+		@include mixins.flexbox(center, center, column);
 
 		a {
 			margin-block-end: 0.8rem;
@@ -48,10 +48,6 @@
 			color: colors.$white;
 			text-decoration: none;
 			transition: color 0.3s linear;
-
-			&:last-of-type {
-				margin-block-end: 0;
-			}
 
 			&:hover,
 			&:focus {
@@ -68,12 +64,63 @@
 
 	&__credits {
 		&-btn {
-			margin-block-start: 3.2rem;
+			margin-block-start: 2.6rem;
 			margin-block-end: 2.4rem;
 		}
 
 		&-copyrights {
 			color: colors.$lightGray;
+		}
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.footer {
+		&__wrapper {
+			display: grid;
+			grid-template-columns: repeat(12, 1fr);
+			grid-template-rows: repeat(1, 1fr);
+		}
+
+		&__socials {
+			@include mixins.flexbox(space-between, flex-start, column);
+			grid-column: 1/2;
+			grid-row: 1/2;
+
+			&-links {
+                margin-block-start: 7.5rem;
+				margin-block-end: 0;
+			}
+		}
+
+		&__links {
+			align-items: flex-start;
+			justify-content: space-between;
+
+			&--left {
+				grid-column: 3/4;
+				grid-row: 1/2;
+			}
+
+			&--right {
+				grid-column: 5/6;
+				grid-row: 1/2;
+			}
+
+			a {
+				margin-block-end: 0;
+			}
+		}
+
+		&__credits {
+			@include mixins.flexbox(space-between, flex-end, column);
+
+			grid-column: 7/13;
+			grid-row: 1/2;
+
+			&-btn {
+				margin: 0;
+			}
 		}
 	}
 }

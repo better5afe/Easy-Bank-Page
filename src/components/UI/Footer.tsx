@@ -19,7 +19,7 @@ const Footer = () => {
 						alt='Easy Bank Logo'
 						className='footer__socials-logo'
 					/>
-					<ul className='footer__socials-links'>
+					<div className='footer__socials-links'>
 						<a href='#'>
 							<IconFacebook />
 						</a>
@@ -35,31 +35,27 @@ const Footer = () => {
 						<a href='#'>
 							<IconInstagram />
 						</a>
-					</ul>
+					</div>
 				</div>
-				<ul className='footer__links'>
-					<li>
-						<a href='#'>About Us</a>
-					</li>
-					<li>
-						<a href='#'>Contact</a>
-					</li>
-					<li>
-						<a href='#'>Blog</a>
-					</li>
-					<li>
-						<a href='#'>Careers</a>
-					</li>
-					<li>
-						<a href='#'>Support</a>
-					</li>
-					<li>
-						<a href='#'>Privacy Policy</a>
-					</li>
-				</ul>
+				<div className='footer__links footer__links--left'>
+					<a href='#'>About Us</a>
+
+					<a href='#'>Contact</a>
+
+					<a href='#'>Blog</a>
+				</div>
+				<div className='footer__links footer__links--right'>
+					<a href='#'>Careers</a>
+
+					<a href='#'>Support</a>
+
+					<a href='#'>Privacy Policy</a>
+				</div>
 				<div className='footer__credits'>
 					<ActionBtn className='footer__credits-btn' />
-					<p className='footer__credits-copyrights'>&copy; Easybank. All Rights Reserved</p>
+					<p className='footer__credits-copyrights'>
+						&copy; Easybank. All Rights Reserved
+					</p>
 				</div>
 			</Wrapper>
 		</footer>
