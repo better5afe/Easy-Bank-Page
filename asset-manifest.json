@@ -1,8 +1,12 @@
 {
   "files": {
-    "main.css": "/Easy-Bank-Page/static/css/main.c8191472.css",
-    "main.js": "/Easy-Bank-Page/static/js/main.bb276156.js",
+    "main.css": "/Easy-Bank-Page/static/css/main.da56a266.css",
+    "main.js": "/Easy-Bank-Page/static/js/main.75b8edc4.js",
+    "static/media/image-currency.jpg": "/Easy-Bank-Page/static/media/image-currency.1b385bf9f62bf25ef22d.jpg",
+    "static/media/image-restaurant.jpg": "/Easy-Bank-Page/static/media/image-restaurant.1951b57675babfd83c6c.jpg",
     "static/media/image-mockups.png": "/Easy-Bank-Page/static/media/image-mockups.48d35b175fe3d36de4ee.png",
+    "static/media/image-plane.jpg": "/Easy-Bank-Page/static/media/image-plane.03db115dff75876c3f3d.jpg",
+    "static/media/image-confetti.jpg": "/Easy-Bank-Page/static/media/image-confetti.67921b1124297023a080.jpg",
     "static/media/icon-api.svg": "/Easy-Bank-Page/static/media/icon-api.74c8ad1751bbd1e7f545e458f9306885.svg",
     "static/media/icon-onboarding.svg": "/Easy-Bank-Page/static/media/icon-onboarding.d74aed6429619336a30e42334d6eb432.svg",
     "static/media/logo.svg": "/Easy-Bank-Page/static/media/logo.4d7cebc59950e27d6f943b4c63129d81.svg",
@@ -11,11 +15,11 @@
     "index.html": "/Easy-Bank-Page/index.html",
     "static/media/icon-close.svg": "/Easy-Bank-Page/static/media/icon-close.c2e36e0469b3b1e6c27328356ce18aed.svg",
     "static/media/icon-hamburger.svg": "/Easy-Bank-Page/static/media/icon-hamburger.b0d311feac968ee5feab7333de091d7f.svg",
-    "main.c8191472.css.map": "/Easy-Bank-Page/static/css/main.c8191472.css.map",
-    "main.bb276156.js.map": "/Easy-Bank-Page/static/js/main.bb276156.js.map"
+    "main.da56a266.css.map": "/Easy-Bank-Page/static/css/main.da56a266.css.map",
+    "main.75b8edc4.js.map": "/Easy-Bank-Page/static/js/main.75b8edc4.js.map"
   },
   "entrypoints": [
-    "static/css/main.c8191472.css",
-    "static/js/main.bb276156.js"
+    "static/css/main.da56a266.css",
+    "static/js/main.75b8edc4.js"
   ]
 }
