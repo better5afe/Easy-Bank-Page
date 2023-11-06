@@ -2,16 +2,21 @@
 	margin: 0 2.4rem;
 }
 
-@media screen and (min-width: 1440px) {
-    .wrapper {
-        margin: 0 16.5rem;
-    }
+@media screen and (min-width: 1200px) {
+	.wrapper {
+		margin: 0 8rem;
+	}
 }
 
+@media screen and (min-width: 1440px) {
+	.wrapper {
+		max-width: 1440px;
+		margin: 0 16.5rem;
+	}
+}
 
 @media screen and (min-width: 1800px) {
 	.wrapper {
-		max-width: 1440px;
 		margin: 0 auto;
 	}
 }
