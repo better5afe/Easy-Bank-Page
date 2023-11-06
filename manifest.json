@@ -1,0 +1,6 @@
+{
+	"short_name": "Easy Bank Page",
+	"name": "Easy Bank Page",
+	"start_url": ".",
+	"display": "standalone"
+}
