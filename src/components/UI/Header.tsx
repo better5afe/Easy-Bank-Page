@@ -1,6 +1,6 @@
 import Wrapper from '../reusable/Wrapper';
 import HeaderDetails from '../subcomponents/header-sub/HeaderDetails';
-import HeaderHero from '../subcomponents/header-sub/HeaderHero';
+import HeaderHero from './HeaderHero';
 
 import './Header.scss';
 
