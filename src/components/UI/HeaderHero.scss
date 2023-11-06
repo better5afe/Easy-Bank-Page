@@ -1,4 +1,5 @@
 .header__hero {
+	position: relative;
 	height: 40rem;
 
 	&-bg {
@@ -16,10 +17,42 @@
 			}
 		}
 	}
+
+	&-carousel {
+		position: absolute;
+		top: -4rem;
+		right: 0;
+		bottom: 0;
+		left: 0;
+
+		&-img {
+			display: block;
+			margin: 0 auto;
+			width: 100%;
+			max-width: 40rem;
+		}
+	}
+}
+
+@media screen and (min-width: 576px) {
+	.header__hero {
+		&-carousel {
+			top: -10rem;
+
+			&-img {
+				display: block;
+				margin: 0 auto;
+				width: 100%;
+				max-width: 45rem;
+			}
+		}
+	}
 }
 
 @media screen and (min-width: 768px) {
 	.header__hero {
+		margin-bottom: 15rem;
+
 		&-bg {
 			overflow: hidden;
 
@@ -44,6 +77,13 @@
 				}
 			}
 		}
+
+		&-carousel {
+			top: -15rem;
+			&-img {
+				max-width: 58rem;
+			}
+		}
 	}
 }
 
@@ -54,10 +94,11 @@
 		flex-basis: 40%;
 
 		&-bg {
+			top: 5rem;
 			left: 0;
 			right: -2.4rem;
 			width: 45vw;
-			max-width: 90rem;
+			max-width: 120rem;
 
 			&-icon {
 				&--desktop {
@@ -69,6 +110,15 @@
 						left: 15rem;
 					}
 				}
+			}
+		}
+
+		&-carousel {
+			top: -5rem;
+			right: -20rem;
+
+			&-img {
+				max-width: 73rem;
 			}
 		}
 	}
