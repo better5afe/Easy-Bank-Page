@@ -39,19 +39,29 @@ const Nav = () => {
 					}`}
 				>
 					<li className='nav__links-item'>
-						<a href='#'>Home</a>
+						<a href='#' onClick={navCtx.closeNav}>
+							Home
+						</a>
 					</li>
 					<li className='nav__links-item'>
-						<a href='#'>About</a>
+						<a href='#' onClick={navCtx.closeNav}>
+							About
+						</a>
 					</li>
 					<li className='nav__links-item'>
-						<a href='#'>Contact</a>
+						<a href='#' onClick={navCtx.closeNav}>
+							Contact
+						</a>
 					</li>
 					<li className='nav__links-item'>
-						<a href='#'>Blog</a>
+						<a href='#' onClick={navCtx.closeNav}>
+							Blog
+						</a>
 					</li>
 					<li className='nav__links-item'>
-						<a href='#'>Careers</a>
+						<a href='#' onClick={navCtx.closeNav}>
+							Careers
+						</a>
 					</li>
 				</ul>
 				<ActionBtn className='nav__actionBtn' />
