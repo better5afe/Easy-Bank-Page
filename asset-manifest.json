@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/Easy-Bank-Page/static/css/main.8feb06c7.css",
+    "main.css": "/Easy-Bank-Page/static/css/main.c8191472.css",
     "main.js": "/Easy-Bank-Page/static/js/main.bb276156.js",
     "static/media/image-mockups.png": "/Easy-Bank-Page/static/media/image-mockups.48d35b175fe3d36de4ee.png",
     "static/media/icon-api.svg": "/Easy-Bank-Page/static/media/icon-api.74c8ad1751bbd1e7f545e458f9306885.svg",
@@ -11,11 +11,11 @@
     "index.html": "/Easy-Bank-Page/index.html",
     "static/media/icon-close.svg": "/Easy-Bank-Page/static/media/icon-close.c2e36e0469b3b1e6c27328356ce18aed.svg",
     "static/media/icon-hamburger.svg": "/Easy-Bank-Page/static/media/icon-hamburger.b0d311feac968ee5feab7333de091d7f.svg",
-    "main.8feb06c7.css.map": "/Easy-Bank-Page/static/css/main.8feb06c7.css.map",
+    "main.c8191472.css.map": "/Easy-Bank-Page/static/css/main.c8191472.css.map",
     "main.bb276156.js.map": "/Easy-Bank-Page/static/js/main.bb276156.js.map"
   },
   "entrypoints": [
-    "static/css/main.8feb06c7.css",
+    "static/css/main.c8191472.css",
     "static/js/main.bb276156.js"
   ]
 }
