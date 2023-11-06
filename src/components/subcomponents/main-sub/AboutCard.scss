@@ -1,0 +1,53 @@
+@use '../../../assets/styles/mixins' as mixins;
+
+.about__cards-card {
+	@include mixins.flexbox(center, center, column);
+	margin-block-end: 3.2rem;
+
+	&:last-of-type {
+		margin-block-end: 0;
+	}
+
+	&-icon {
+		margin-block-end: 2.4rem;
+	}
+
+	&-title {
+		margin-block-end: 1.6rem;
+		font-size: 2rem;
+		line-height: 2.8rem;
+		@include mixins.heading;
+	}
+
+	&-text {
+		@include mixins.standard-text;
+	}
+}
+
+@media screen and (min-width: 768px) {
+	.about__cards-card {
+		flex-basis: 45%;
+		margin-block-end: 6.4rem;
+
+		&:nth-of-type(3),
+		&:last-of-type {
+			margin-block-end: 0;
+		}
+
+		&-icon {
+			align-self: flex-start;
+		}
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.about__cards-card {
+		flex-basis: auto;
+		width: 25.5rem;
+		margin-block-end: 0;
+
+		&-title {
+			font-size: 2.4rem;
+		}
+	}
+}

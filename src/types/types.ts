@@ -15,3 +15,12 @@ export interface NavContextProps {
 	toggleNav: voidFn;
 	closeNav: voidFn;
 }
+
+interface CardDetails {
+	title: string,
+	description: string
+}
+
+export interface AboutCardProps extends CardDetails {
+	icon: any
+}
