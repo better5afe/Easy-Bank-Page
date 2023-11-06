@@ -1,0 +1,37 @@
+@use '../../../assets/styles/colors' as colors;
+@use '../../../assets/styles/mixins' as mixins;
+
+.about {
+	padding: 6.4rem 0;
+	background: colors.$smokeyWhite;
+	text-align: center;
+
+	&__details {
+		margin-block-end: 5.6rem;
+
+		&-title {
+			margin-block-end: 1.4rem;
+			@include mixins.section-heading;
+		}
+
+		&-text {
+			@include mixins.section-text;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.about {
+		padding: 9.6rem 0 8rem;
+		text-align: left;
+
+		&__details {
+			max-width: 64rem;
+			margin-block-end: 7.2rem;
+
+			&-title {
+				margin-block-end: 1.6rem;
+			}
+		}
+	}
+}

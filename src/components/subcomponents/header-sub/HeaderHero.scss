@@ -1,6 +1,6 @@
 .header__hero {
 	position: relative;
-	height: 40rem;
+	height: 35rem;
 
 	&-bg {
 		position: relative;
@@ -29,13 +29,15 @@
 			display: block;
 			margin: 0 auto;
 			width: 100%;
-			max-width: 40rem;
+			max-width: 35rem;
 		}
 	}
 }
 
 @media screen and (min-width: 576px) {
 	.header__hero {
+		height: 40rem;
+		
 		&-carousel {
 			top: -10rem;
 

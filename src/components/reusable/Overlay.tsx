@@ -11,6 +11,7 @@ const Overlay = () => {
 			className={`overlay ${
 				navCtx.isOpen ? 'overlay--visible' : 'delayed overlay--hidden'
 			}`}
+			onClick={navCtx.closeNav}
 		/>
 	);
 };

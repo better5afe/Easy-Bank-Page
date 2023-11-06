@@ -1,9 +1,14 @@
 @use '../../assets/styles/mixins' as mixins;
 
+.header {
+	padding: 0 0 8.8rem;
+}
+
 @media screen and (min-width: 1200px) {
 	.header {
 		height: 66rem;
 		max-height: 90vh;
+		padding: 0;
 
 		&__wrapper {
 			height: 100%;

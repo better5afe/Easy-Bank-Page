@@ -12,13 +12,35 @@
 	font-weight: 300;
 }
 
-@mixin text {
+@mixin section-heading {
+	color: colors.$darkGray;
+	font-size: 3.2rem;
+	font-weight: 300;
+
+	@media screen and (min-width: 1200px) {
+		font-size: 4rem;
+		line-height: 6.4rem;
+	}
+}
+
+@mixin standard-text {
 	font-size: 1.5rem;
 	color: colors.$lightGray;
 	line-height: 2.5rem;
 
-	@media screen and (min-width: 1440px) {
+	@media screen and (min-width: 1200px) {
 		font-size: 1.6rem;
 		line-height: 2.6rem;
+	}
+}
+
+@mixin section-text {
+	font-size: 1.5rem;
+	color: colors.$lightGray;
+	line-height: 2.5rem;
+
+	@media screen and (min-width: 1200px) {
+		font-size: 1.8rem;
+		line-height: 2.8rem;
 	}
 }

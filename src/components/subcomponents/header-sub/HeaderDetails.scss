@@ -11,7 +11,7 @@
 
 	&-text {
 		margin-block: 1.6rem 3.2rem;
-		@include mixins.text;
+		@include mixins.section-text;
 	}
 }
 
