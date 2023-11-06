@@ -3,6 +3,7 @@ import Nav from './components/UI/Nav';
 import Overlay from './components/reusable/Overlay';
 import Header from './components/UI/Header';
 import Main from './components/UI/Main';
+import Footer from './components/UI/Footer';
 
 const App = () => {
 	return (
@@ -10,6 +11,7 @@ const App = () => {
 			<Nav />
 			<Header />
 			<Main />
+			<Footer />
 			{ReactDOM.createPortal(<Overlay />, document.getElementById('overlay')!)}
 		</>
 	);
