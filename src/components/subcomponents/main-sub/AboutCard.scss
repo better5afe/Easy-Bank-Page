@@ -1,6 +1,6 @@
 @use '../../../assets/styles/mixins' as mixins;
 
-.about__cards-card {
+.about__card {
 	@include mixins.flexbox(center, center, column);
 	margin-block-end: 3.2rem;
 
@@ -25,7 +25,7 @@
 }
 
 @media screen and (min-width: 768px) {
-	.about__cards-card {
+	.about__card {
         align-items: flex-start;
 		flex-basis: 45%;
 		margin-block-end: 6.4rem;
@@ -38,7 +38,7 @@
 }
 
 @media screen and (min-width: 1200px) {
-	.about__cards-card {
+	.about__card {
 		flex-basis: auto;
 		width: 25.5rem;
 		margin-block-end: 0;
