@@ -51,33 +51,30 @@ const AboutSection = () => {
 	);
 
 	useLayoutEffect(() => {
+		const cards = gsap.utils.toArray('.about__cards-card');
+
 		let mm = gsap.matchMedia();
 
 		let tl = timeline.current;
 
 		mm.add(
-			'(max-width: 767px',
+			'(max-width: 1999px',
 			() => {
-				gsap.set('.about__card-card', { opacity: 0 });
-				gsap.set('.about__cards-card--banking', { x: -100 });
-
-				gsap.to('.about__cards-card--banking', {
-					scrollTrigger: {
-						trigger: '.about__cards-card--banking',
-						start: 'top center',
-					},
-					x: 0,
-					opacity: 1,
-					duration: 1,
+				cards.forEach((card: any, idx: number) => {
+					gsap.fromTo(
+						card,
+						{
+							x: idx % 2 === 0 ? -100 : 100,
+							opacity: 0,
+						},
+						{
+							x: 0,
+							opacity: 1,
+							duration: 2,
+							scrollTrigger: card,
+						}
+					);
 				});
-			},
-			aboutSectionRef
-		);
-
-		mm.add(
-			'(min-width: 768px)',
-			() => {
-				gsap.set('.about__cards-card--api', { opacity: 1 });
 			},
 			aboutSectionRef
 		);
@@ -85,24 +82,22 @@ const AboutSection = () => {
 		mm.add(
 			'(min-width: 1200px)',
 			() => {
-				gsap.utils
-					.toArray('.about__cards-card')
-					.forEach((element: any, index: number) => {
-						gsap.fromTo(
-							element,
-							{
-								y: index % 2 === 0 ? '-100' : '100',
-								opacity: 0,
-							},
-							{
-								y: 0,
-								opacity: 1,
-								duration: 2,
-								delay: index,
-								scrollTrigger: 'about',
-							}
-						);
-					});
+				cards.forEach((card: any, idx: number) => {
+					gsap.fromTo(
+						card,
+						{
+							y: idx % 2 === 0 ? -100 : 100,
+							opacity: 0,
+						},
+						{
+							y: 0,
+							opacity: 1,
+							duration: 2,
+							delay: idx,
+							scrollTrigger: 'about',
+						}
+					);
+				});
 			},
 			aboutSectionRef
 		);
