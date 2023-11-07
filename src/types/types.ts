@@ -22,6 +22,7 @@ interface CardDetails {
 }
 
 export interface AboutCardProps extends CardDetails {
+	id: string;
 	icon: any;
 }
 
