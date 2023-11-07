@@ -48,10 +48,10 @@ const AboutSection = () => {
 
 		let mm = gsap.matchMedia();
 
-		function animateCards(cards: any, trigger: string) {
+		function animateCards(viewport: string) {
 			cards.forEach((card: any, idx: number) => {
 				const props =
-					trigger === 'about'
+					viewport === 'desktop'
 						? { y: idx % 2 === 0 ? -100 : 100 }
 						: { x: idx % 2 === 0 ? -100 : 100 };
 				gsap.fromTo(
@@ -62,21 +62,21 @@ const AboutSection = () => {
 						y: 0,
 						opacity: 1,
 						duration: 2,
-						delay: idx,
-						scrollTrigger: trigger,
+						delay: idx * 0.5,
+						scrollTrigger: {
+							trigger: card,
+							start: 'top center',
+							end: 'top bottom',
+						},
 					}
 				);
 			});
 		}
 
-		mm.add(
-			'(max-width: 1999px',
-			() => animateCards(cards, 'card'),
-			aboutSectionRef
-		);
+		mm.add('(max-width: 1199px', () => animateCards('mobile'), aboutSectionRef);
 		mm.add(
 			'(min-width: 1200px)',
-			() => animateCards(cards, 'about'),
+			() => animateCards('desktop'),
 			aboutSectionRef
 		);
 
