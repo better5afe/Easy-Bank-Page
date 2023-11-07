@@ -98,6 +98,8 @@ const ArticlesSection = () => {
 			},
 			articlesSectionRef
 		);
+
+		return () => mm.revert();
 	}, []);
 
 	return (
