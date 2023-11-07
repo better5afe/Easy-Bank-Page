@@ -8,7 +8,12 @@ export interface ClassNameProps {
 
 type voidFn = () => void;
 
-export interface WrapperProps extends ChildrenProps, ClassNameProps {}
+export interface WrapperProps extends ChildrenProps, ClassNameProps { }
+
+export interface ActionBtnProps extends ClassNameProps {
+	onMouseEnter?: () => void;
+	onMouseLeave?: () => void
+}
 
 export interface NavContextProps {
 	isOpen: boolean;

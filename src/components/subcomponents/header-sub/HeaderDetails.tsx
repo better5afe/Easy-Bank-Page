@@ -6,23 +6,40 @@ import './HeaderDetails.scss';
 
 const HeaderDetails = () => {
 	const headerRef = useRef<HTMLDivElement | null>(null);
-	const timeline = useRef<GSAPTimeline>();
+
+	const mouseEnterHandler = () => {
+		gsap.to('.header__details-btn', { opacity: 0.5, duration: 0.3 });
+	};
+
+	const mouseLeaveHandler = () => {
+		gsap.to('.header__details-btn', {
+			opacity: 1,
+			duration: 0.3,
+		});
+	};
 
 	useLayoutEffect(() => {
-		let gsapCtx = gsap.context(() => {}, headerRef);
+		let gsapCtx = gsap.context(() => {
+			let headerElements = [
+				'.header__details-title',
+				'.header__details-text',
+				'.header__details-btn',
+			];
 
-		timeline.current = gsap.timeline({
-			defaults: {
-				duration: 1,
-			},
-		});
+			headerElements.forEach((element: any, idx: number) => {
+				gsap.fromTo(
+					element,
+					{ opacity: 0 },
+					{ opacity: 1, duration: 1, delay: idx }
+				);
+			});
 
-		timeline.current
-			.fromTo('.header__details-title', { opacity: 0 }, { opacity: 1 })
-			.fromTo('.header__details-text', { opacity: 0 }, { opacity: 1 })
-			.fromTo('.header__details-btn', { opacity: 0 }, { opacity: 1 });
-
-		timeline.current.play();
+			gsap.fromTo(
+				'.header__details-btn',
+				{ scale: 1 },
+				{ scale: 1.1, duration: 1.5, delay: 5, repeat: -1, yoyo: true }
+			);
+		}, headerRef);
 
 		return () => gsapCtx.revert();
 	}, []);
@@ -34,7 +51,11 @@ const HeaderDetails = () => {
 				Take your financial life online. Your Easybank account will be a
 				one-stop-shop for spending, saving, budgeting, investing, and much more.
 			</p>
-			<ActionBtn className='header__details-btn' />
+			<ActionBtn
+				className='header__details-btn'
+				onMouseEnter={mouseEnterHandler}
+				onMouseLeave={mouseLeaveHandler}
+			/>
 		</div>
 	);
 };

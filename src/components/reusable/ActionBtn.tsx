@@ -1,9 +1,9 @@
-import { ClassNameProps } from '../../types/types';
+import { ActionBtnProps } from '../../types/types';
 
 import './ActionBtn.scss'
 
-const ActionBtn: React.FC<ClassNameProps> = ({ className }) => {
-	return <button className={`actionBtn ${className}`}>Request Invite</button>;
+const ActionBtn: React.FC<ActionBtnProps> = ({ className, onMouseEnter, onMouseLeave }) => {
+	return <button className={`actionBtn ${className}`} onMouseEnter={onMouseEnter} onMouseLeave={onMouseLeave}>Request Invite</button>;
 };
 
 export default ActionBtn;
