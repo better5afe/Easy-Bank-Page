@@ -42,63 +42,41 @@ const aboutCards = [
 
 const AboutSection = () => {
 	const aboutSectionRef = useRef<HTMLElement | null>(null);
-	const timeline = useRef<GSAPTimeline>(
-		gsap.timeline({
-			defaults: {
-				opacity: 0,
-			},
-		})
-	);
 
 	useLayoutEffect(() => {
 		const cards = gsap.utils.toArray('.about__cards-card');
 
 		let mm = gsap.matchMedia();
 
-		let tl = timeline.current;
+		function animateCards(cards: any, trigger: string) {
+			cards.forEach((card: any, idx: number) => {
+				const props =
+					trigger === 'about'
+						? { y: idx % 2 === 0 ? -100 : 100 }
+						: { x: idx % 2 === 0 ? -100 : 100 };
+				gsap.fromTo(
+					card,
+					{ ...props, opacity: 0 },
+					{
+						x: 0,
+						y: 0,
+						opacity: 1,
+						duration: 2,
+						delay: idx,
+						scrollTrigger: trigger,
+					}
+				);
+			});
+		}
 
 		mm.add(
 			'(max-width: 1999px',
-			() => {
-				cards.forEach((card: any, idx: number) => {
-					gsap.fromTo(
-						card,
-						{
-							x: idx % 2 === 0 ? -100 : 100,
-							opacity: 0,
-						},
-						{
-							x: 0,
-							opacity: 1,
-							duration: 2,
-							scrollTrigger: card,
-						}
-					);
-				});
-			},
+			() => animateCards(cards, 'card'),
 			aboutSectionRef
 		);
-
 		mm.add(
 			'(min-width: 1200px)',
-			() => {
-				cards.forEach((card: any, idx: number) => {
-					gsap.fromTo(
-						card,
-						{
-							y: idx % 2 === 0 ? -100 : 100,
-							opacity: 0,
-						},
-						{
-							y: 0,
-							opacity: 1,
-							duration: 2,
-							delay: idx,
-							scrollTrigger: 'about',
-						}
-					);
-				});
-			},
+			() => animateCards(cards, 'about'),
 			aboutSectionRef
 		);
 
