@@ -1,7 +1,7 @@
 import HeroMobileBg from '../../../assets/images/header/HeroMobileBg';
 import HeroDesktopBgLeft from '../../../assets/images/header/HeroDesktopBgLeft';
 import HeroDesktopBgRight from '../../../assets/images/header/HeroDesktopBgRight';
-import HeroImg from '../../../assets/images/header/image-mockups.png'
+import HeroImg from '../../../assets/images/header/image-mockups.png';
 
 import './HeaderHero.scss';
 

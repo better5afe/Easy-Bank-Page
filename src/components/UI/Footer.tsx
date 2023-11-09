@@ -16,23 +16,23 @@ const Footer = () => {
 				<div className='footer__socials'>
 					<img
 						src={Logo}
-						alt='Easy Bank Logo'
+						alt='Easy bank'
 						className='footer__socials-logo'
 					/>
 					<div className='footer__socials-links'>
-						<a href='#'>
+						<a href='#' aria-label='Go to our facebook page'>
 							<IconFacebook />
 						</a>
-						<a href='#'>
+						<a href='#' aria-label='Go to our youtube channel'>
 							<IconYouTube />
 						</a>
-						<a href='#'>
+						<a href='#' aria-label='Go to our twitter page'>
 							<IconTwitter />
 						</a>
-						<a href='#'>
+						<a href='#' aria-label='Go to our pinterest page'>
 							<IconPinterest />
 						</a>
-						<a href='#'>
+						<a href='#' aria-label='Go to our instagram page'>
 							<IconInstagram />
 						</a>
 					</div>

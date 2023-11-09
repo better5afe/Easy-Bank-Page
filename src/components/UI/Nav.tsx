@@ -15,19 +15,23 @@ const Nav = () => {
 		<nav className='nav'>
 			<Wrapper className='nav__wrapper'>
 				<a href='#' className='nav__logo'>
-					<img src={Logo} alt='Logo icon' className='nav__logo-img' />
+					<img src={Logo} alt='Logo icon' className='Easy bank' />
 				</a>
-				<button className='nav__btn' onClick={navCtx.toggleNav}>
+				<button
+					className='nav__btn'
+					onClick={navCtx.toggleNav}
+					aria-label='Navigation button'
+				>
 					<img
 						src={HamburgerIcon}
-						alt=''
+						alt='Open navigation list'
 						className={`nav__btn-icon ${
 							navCtx.isOpen && 'nav__btn-icon--hidden'
 						}`}
 					/>
 					<img
 						src={CloseIcon}
-						alt=''
+						alt='Close navigation list'
 						className={`nav__btn-icon ${
 							!navCtx.isOpen && 'nav__btn-icon--hidden'
 						}`}
@@ -37,6 +41,8 @@ const Nav = () => {
 					className={`nav__links ${
 						navCtx.isOpen ? 'nav__links--expanded' : ''
 					}`}
+					aria-hidden={navCtx.isOpen ? 'true' : 'false'}
+					role='navigation'
 				>
 					<li className='nav__links-item'>
 						<a href='#' onClick={navCtx.closeNav}>
