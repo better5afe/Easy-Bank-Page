@@ -41,8 +41,6 @@ const Nav = () => {
 					className={`nav__links ${
 						navCtx.isOpen ? 'nav__links--expanded' : ''
 					}`}
-					aria-hidden={navCtx.isOpen ? 'true' : 'false'}
-					role='navigation'
 				>
 					<li className='nav__links-item'>
 						<a href='#' onClick={navCtx.closeNav}>
